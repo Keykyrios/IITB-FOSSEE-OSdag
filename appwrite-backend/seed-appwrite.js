@@ -45,7 +45,7 @@ async function createUser(email, password, name) {
     return user.$id;
   } catch (err) {
     if (err.code === 409) {
-      // User already exists — find them by email
+      // User already exists - find them by email
       const result = await users.list([`equal("email", ["${email}"])`]);
       if (result.users.length > 0) {
         console.log(`  User already exists: ${email} (${result.users[0].$id})`);

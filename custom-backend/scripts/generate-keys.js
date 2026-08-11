@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const keysDir = join(__dirname, '..', 'keys');
 
 if (existsSync(join(keysDir, 'private.pem'))) {
-  console.log('Keys already exist in ./keys/ — skipping generation.');
+  console.log('Keys already exist in ./keys/ - skipping generation.');
   console.log('Delete the folder and re-run if you want fresh keys.');
   process.exit(0);
 }

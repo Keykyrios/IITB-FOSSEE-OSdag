@@ -96,7 +96,7 @@
     try {
       initClient();
       const user = await account.get();
-      // account.get() can only return the current user — no way to
+      // account.get() can only return the current user - no way to
       // pass someone else's ID, so IDOR isn't possible here either.
       return json(200, {
         id: user.$id,
@@ -229,11 +229,11 @@
     m = pathname.match(/^\/files\/([^/]+)$/);
     if (m && req.method === 'GET') return handleFileById(m[1]);
 
-    // No route matched — pass through to real fetch. This is critical:
+    // No route matched - pass through to real fetch. This is critical:
     // the Appwrite SDK makes its own fetch calls to the Appwrite server,
     // and those URLs (e.g. /v1/account/sessions) don't match our patterns.
     return originalFetch.call(window, input, init);
   };
 
-  console.info('[appwrite-adapter] ready — select "Appwrite" mode in the UI to use it.');
+  console.info('[appwrite-adapter] ready - select "Appwrite" mode in the UI to use it.');
 })();

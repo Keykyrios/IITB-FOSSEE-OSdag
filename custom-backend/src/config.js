@@ -10,7 +10,7 @@ function loadKey(name) {
   try {
     return readFileSync(join(keysDir, name), 'utf8');
   } catch {
-    console.error(`Missing ${name} — run "npm run generate-keys" first.`);
+    console.error(`Missing ${name} - run "npm run generate-keys" first.`);
     process.exit(1);
   }
 }

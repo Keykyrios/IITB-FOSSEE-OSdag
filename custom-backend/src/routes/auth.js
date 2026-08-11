@@ -99,7 +99,7 @@ router.post('/login', loginLimiter, async (req, res) => {
       return res.status(401).json(GENERIC);
     }
 
-    // Success — clear old failures for this email
+    // Success - clear old failures for this email
     await pool.query(
       `DELETE FROM login_attempts
        WHERE email = $1

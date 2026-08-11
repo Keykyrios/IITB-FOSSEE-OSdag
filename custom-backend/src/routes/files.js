@@ -10,7 +10,7 @@ const uploadsDir = resolve(join(__dirname, '..', '..', 'uploads'));
 
 const router = Router();
 
-// GET /files — list the authenticated user's files
+// GET /files - list the authenticated user's files
 router.get('/files', requireAuth, async (req, res) => {
   try {
     const { rows } = await pool.query(
@@ -30,8 +30,8 @@ router.get('/files', requireAuth, async (req, res) => {
   }
 });
 
-// GET /files/:id — single file metadata.
-// Returns 403 (not 404) for another user's file — the task spec explicitly
+// GET /files/:id - single file metadata.
+// Returns 403 (not 404) for another user's file - the task spec explicitly
 // asks for this distinction even though production apps often hide it.
 router.get('/files/:id', requireAuth, async (req, res) => {
   try {
@@ -59,7 +59,7 @@ router.get('/files/:id', requireAuth, async (req, res) => {
   }
 });
 
-// GET /files/:id/download — stream the actual file bytes
+// GET /files/:id/download - stream the actual file bytes
 router.get('/files/:id/download', requireAuth, async (req, res) => {
   try {
     const { rows } = await pool.query(
@@ -78,7 +78,7 @@ router.get('/files/:id/download', requireAuth, async (req, res) => {
 
     const fullPath = resolve(join(uploadsDir, file.disk_path));
 
-    // Guard against path traversal — the resolved path must stay inside
+    // Guard against path traversal - the resolved path must stay inside
     // the uploads directory. disk_path comes from our seed script (not
     // user input), but defence in depth is cheap.
     if (!fullPath.startsWith(uploadsDir)) {

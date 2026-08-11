@@ -4,7 +4,7 @@ import { requireAuth } from '../middleware/auth.js';
 
 const router = Router();
 
-// GET /me — returns the current user's profile.
+// GET /me - returns the current user's profile.
 // Identity comes from the JWT only; there's no param to swap, so IDOR isn't possible.
 router.get('/me', requireAuth, async (req, res) => {
   try {

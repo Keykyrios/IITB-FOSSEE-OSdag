@@ -1,5 +1,5 @@
 {
-  "_note": "Sample seed data for local development only. Passwords here are PLAINTEXT placeholders meant to be hashed (e.g. bcrypt) by your seed script before insertion into the database — never store or commit real plaintext passwords.",
+  "_note": "Sample seed data for local development only. Passwords here are PLAINTEXT placeholders meant to be hashed (e.g. bcrypt) by your seed script before insertion into the database - never store or commit real plaintext passwords.",
 
   "users": [
     {

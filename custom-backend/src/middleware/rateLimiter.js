@@ -1,6 +1,6 @@
 import rateLimit from 'express-rate-limit';
 
-// 100 requests per 15 minutes per IP — enough for normal use, blocks scanners.
+// 100 requests per 15 minutes per IP - enough for normal use, blocks scanners.
 export const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,

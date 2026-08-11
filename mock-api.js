@@ -20,7 +20,7 @@
  * - Sessions are an in-memory Map, wiped on page reload. A real backend
  *   would use a signed JWT or a server-side session store (e.g. Redis, DB).
  * - Everything below runs client-side and is fully visible/editable by
- *   whoever opens devtools — that's fine for a local demo, never fine for
+ *   whoever opens devtools - that's fine for a local demo, never fine for
  *   production auth.
  *
  * Enable/disable from index.html with the "Use in-browser mock API" checkbox.
@@ -262,5 +262,5 @@
     return json(404, { error: "No mock route for " + req.method + " " + pathname });
   };
 
-  console.info("[mock-api] ready — check the 'Use in-browser mock API' box in index.html to enable it");
+  console.info("[mock-api] ready - check the 'Use in-browser mock API' box in index.html to enable it");
 })();
