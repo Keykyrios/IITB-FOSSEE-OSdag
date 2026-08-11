@@ -1,0 +1,12 @@
+{
+  "name": "appwrite-seed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node seed-appwrite.js"
+  },
+  "dependencies": {
+    "node-appwrite": "^14.1.0"
+  }
+}
