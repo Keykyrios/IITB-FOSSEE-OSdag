@@ -1,2 +1,8 @@
 node_modules/
 .env
+
+# Generated RSA keys (contain private key — never commit)
+custom-backend/keys/
+
+# Seed-generated sample files on disk
+custom-backend/uploads/
